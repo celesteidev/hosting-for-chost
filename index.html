@@ -222,75 +222,56 @@
                         </div>
                         <div drop-area="" drop="handleDrop" id="databases-drop-area" class="drop-area"></div>
                      </div>
-                     <!-- end ngRepeat: group in applicationList track by group.group -->
-                     <div class="">
-                        <div draggable="true" drag="handleDrag" id="domains-group" class="panel panel-widget icon-menu-section" role="category">
-                           <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
-                              <span id="domains-header" class="group-header">Domains</span>
-                              <span id="domains-collapsed-indicator" class="group-header-indicator pull-right fa fa-minus"></span>
-                           </div>
-                           <div id="domains-body" class="panel-body icon-container-body">
-                              <!-- ngRepeat: item in ::group.items track by item.file -->
-                              <div class="item" role="page">
-                                 <a id="icon-addon_domains" class="itemImageWrapper integrations_icon spriteicon_img icon-addon_domains" href="addondomains.html">
-                                 </a>
-                                 <a id="item_addon_domains" class="itemTextWrapper link"  href="addondomains.html">Addon Domains</a>
-                              </div>
-                              <!-- end ngRepeat: item in ::group.items track by item.file -->
-                              <div class="item" role="page">
-                                 <a id="icon-subdomains" class="itemImageWrapper integrations_icon spriteicon_img icon-subdomains" href="subdomains.html">
-                                 </a>
-                                 <a id="item_subdomains" class="itemTextWrapper link"  href="subdomains.html">Sub Domains</a>
-                              </div>
-                              <!-- end ngRepeat: item in ::group.items track by item.file -->
-                              <div class="item" role="page">
-                                 <a id="icon-aliases" class="itemImageWrapper integrations_icon spriteicon_img icon-aliases" href="parked.html">
-                                 </a>
-                                 <a id="item_aliases" class="itemTextWrapper link"  href="parked.html">Aliases (Parked Domains)</a>
-                              </div>
-                              <!-- end ngRepeat: item in ::group.items track by item.file -->
-                              <div class="item" role="page">
-                                 <a id="icon-redirects" class="itemImageWrapper integrations_icon spriteicon_img icon-redirects" href="redirect.html">
-                                 </a>
-                                 <a id="item_redirects" class="itemTextWrapper link"  href="redirect.html">Redirects</a>
-                              </div>
-                              <!-- end ngRepeat: item in ::group.items track by item.file -->
-                                 <div class="">
-                        <div draggable="true" drag="handleDrag" id="domains-group" class="panel panel-widget icon-menu-section" role="category">
-                           <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
-                              <span id="domains-header" class="group-header">DNS</span>
-                              <span id="domains-collapsed-indicator" class="group-header-indicator pull-right fa fa-minus"></span>
-                           </div>
-                           <div id="domains-body" class="panel-body icon-container-body">
-                              <!-- ngRepeat: item in ::group.items track by item.file -->
-                              <div class="item" role="page">
-                                 <a id="icon-addon_domains" class="itemImageWrapper integrations_icon spriteicon_img icon-addon_domains" href="addondomains.html">
-                                 </a>
-                                 <a id="item_addon_domains" class="itemTextWrapper link"  href="addondomains.html">Addon Domains</a>
-                              </div>
-                              <!-- end ngRepeat: item in ::group.items track by item.file -->
-                              <div class="item" role="page">
-                                 <a id="icon-subdomains" class="itemImageWrapper integrations_icon spriteicon_img icon-subdomains" href="subdomains.html">
-                                 </a>
-                                 <a id="item_subdomains" class="itemTextWrapper link"  href="subdomains.html">Sub Domains</a>
-                              </div>
-                              <!-- end ngRepeat: item in ::group.items track by item.file -->
-                              <div class="item" role="page">
-                                 <a id="icon-aliases" class="itemImageWrapper integrations_icon spriteicon_img icon-aliases" href="parked.html">
-                                 </a>
-                                 <a id="item_aliases" class="itemTextWrapper link"  href="parked.html">Aliases (Parked Domains)</a>
-                              </div>
-                              <!-- end ngRepeat: item in ::group.items track by item.file -->
-                              <div class="item" role="page">
-                                 <a id="icon-redirects" class="itemImageWrapper integrations_icon spriteicon_img icon-redirects" href="redirect.html">
-                                 </a>
-                                 <a id="item_redirects" class="itemTextWrapper link"  href="redirect.html">Redirects</a>
-                              </div>
-                              <!-- end ngRepeat: item in ::group.items track by item.file -->
-                           </div>
-                        </div>
-                        <div drop-area="" drop="handleDrop" id="domains-drop-area" class="drop-area"></div>
-                     </div>
+                     <!-- Domains Section -->
+<div class="">
+  <div draggable="true" drag="handleDrag" id="domains-group" class="panel panel-widget icon-menu-section" role="category">
+    <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
+      <span id="domains-header" class="group-header">Domains</span>
+      <span id="domains-collapsed-indicator" class="group-header-indicator pull-right fa fa-minus"></span>
+    </div>
+    <div id="domains-body" class="panel-body icon-container-body">
+      <div class="item" role="page">
+        <a id="icon-addon_domains" class="itemImageWrapper integrations_icon spriteicon_img icon-addon_domains" href="addondomains.html"></a>
+        <a id="item_addon_domains" class="itemTextWrapper link" href="addondomains.html">Addon Domains</a>
+      </div>
+      <div class="item" role="page">
+        <a id="icon-subdomains" class="itemImageWrapper integrations_icon spriteicon_img icon-subdomains" href="subdomains.html"></a>
+        <a id="item_subdomains" class="itemTextWrapper link" href="subdomains.html">Sub Domains</a>
+      </div>
+      <div class="item" role="page">
+        <a id="icon-aliases" class="itemImageWrapper integrations_icon spriteicon_img icon-aliases" href="parked.html"></a>
+        <a id="item_aliases" class="itemTextWrapper link" href="parked.html">Aliases (Parked Domains)</a>
+      </div>
+      <div class="item" role="page">
+        <a id="icon-redirects" class="itemImageWrapper integrations_icon spriteicon_img icon-redirects" href="redirect.html"></a>
+        <a id="item_redirects" class="itemTextWrapper link" href="redirect.html">Redirects</a>
+      </div>
+    </div>
+  </div>
+  <div drop-area="" drop="handleDrop" id="domains-drop-area" class="drop-area"></div>
+</div>
+
+<!-- DNS Section -->
+<div class="">
+  <div draggable="true" drag="handleDrag" id="dns-group" class="panel panel-widget icon-menu-section" role="category">
+    <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
+      <span id="dns-header" class="group-header">DNS</span>
+      <span id="dns-collapsed-indicator" class="group-header-indicator pull-right fa fa-minus"></span>
+    </div>
+    <div id="dns-body" class="panel-body icon-container-body">
+      <div class="item" role="page">
+        <a id="icon-dns-zone" class="itemImageWrapper integrations_icon spriteicon_img icon-dns" href="dnszone.html"></a>
+        <a id="item_dns_zone" class="itemTextWrapper link" href="dnszone.html">DNS Zone Editor</a>
+      </div>
+      <div class="item" role="page">
+        <a id="icon-dns-records" class="itemImageWrapper integrations_icon spriteicon_img icon-records" href="records.html"></a>
+        <a id="item_dns_records" class="itemTextWrapper link" href="records.html">Manage Records</a>
+      </div>
+    </div>
+  </div>
+  <div drop-area="" drop="handleDrop" id="dns-drop-area" class="drop-area"></div>
+</div>
+
                      <!-- end ngRepeat: group in applicationList track by group.group -->
                      <div class="">
                         <div draggable="true" drag="handleDrag" id="email-group" class="panel panel-widget icon-menu-section" role="category">
