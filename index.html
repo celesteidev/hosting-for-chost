@@ -57,15 +57,9 @@
                               <a id="lnkUserPrefChangePwd" href="changepassword.html">Change Password</a>
                            </li>
                            <li>
-                              <a id="lnkUserPrefChangeLang" href="changelanguage.html">Change Language</a>
-                           </li>
-                           <li>
                               <a id="lnkUserPrefUpdateContactInfo" href="changeemail.html">Update Contact Email</a>
                            </li>
                            <li>
-                              <a id="lnkUserPrefResetInterface" href="#" data-toggle="modal" data-target="#demo" onclick="reset_all_interface_settings()">
-                              Reset Page Settings 
-                              </a>
                            </li>
                         </ul>
                      </div>
@@ -104,39 +98,6 @@
                         <div align="center">
                         </div>
                         <input id="quickjump" type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="searchText" ng-keyup="clearSearch($event)" placeholder="[DISABLED IN DEMO] Find functions quickly by typing here." name="">
-                     </div>
-                     <div id="boxes" class="">
-                        <div drop-area="" drop="handleDrop" id="top-drop-area" class="drop-area"></div>
-                        <div ="group="" in="" applicationlist="" track="" by="" group.group"="">
-                        <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
-                           SEARCH FOR A NEW DOMAIN NAME
-                        </div>
-                        <div draggable="true" drag="handleDrag" id="-group" class="panel panel-widget icon-menu-section" role="category">
-                           <form target="_blank" action="https://ifastnet.com/portal/domainchecker.php" method="post" class="ng-pristine ng-valid" name="">
-                              <input name="direct" value="true" type="hidden">
-                              <input name="domain" size="54" type="text">
-                              <select name="ext">
-                                 <option value=".info">.info</option>
-                                 <option value=".com">.com</option>
-                                 <option value=".net">.net</option>
-                                 <option value=".org">.org</option>
-                                 <option value=".cc">.cc</option>
-                                 <option value=".co.uk">.co.uk</option>
-                                 <option value=".biz">.biz</option>
-                                 <option value=".bz">.bz</option>
-                                 <option value=".eu">.eu</option>
-                                 <option value=".mobi">.mobi</option>
-                                 <option value=".us">.us</option>
-                                 <option value=".name">.name</option>
-                              </select>
-                              <input class="btn btn-info" value="Check Now" type="submit">
-                           </form>
-                        </div>
-                        <div drop-area="" drop="handleDrop" id="-drop-area" class="drop-area"></div>
-                     </div>
-                  </div>
-                  <div id="boxes" class="">
-                     <div drop-area="" drop="handleDrop" id="top-drop-area" class="drop-area"></div>
                      <!-- ngRepeat: group in applicationList track by group.group -->
                      <div class="">
                         <div draggable="true" drag="handleDrag" id="preferences-group" class="panel panel-widget icon-menu-section" role="category">
