@@ -2,25 +2,30 @@
 <html lang="en" dir="ltr" data-style="basic">
 <head>
     <title>Celestei Panel</title>
+    <style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style>
+    <style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width">
+    <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#293a4a">
+    <!-- Mobile Chrome-->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-status-bar-style" content="default">
+    <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="shortcut icon" href="elements/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="elements/original.master-ltr.cmb.min.css">
     <link rel="stylesheet" type="text/css" href="elements/chosen.min.css">
-    <link rel="stylesheet" type="text/css" href="elements/icon_spritemap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
-        /* Your existing styles */
+        /* Embedding: /usr/local/cpanel/base/frontend/paper_lantern/home/dashboard.min.css */
         #cpanel_body{max-width:none}.panel-widget{border-radius:3px;box-shadow:0 0 3px rgba(0,0,0,.2);height:auto;border:0;margin-bottom:15px;display:table;width:100%;max-width:100%}.widget-heading{border:1px solid #293a4a;background-color:rgba(41,58,74,.95);color:#fff;text-transform:uppercase}.widget-heading .close{color:#fff;opacity:1}.widget-draggable{cursor:move}.group-header-indicator{cursor:pointer}html[dir="rtl"] .pull-right{float:left!important}.alert-list{margin:0;padding:0;width:100%}.alert-item{padding:0 8px;display:inline-block;width:50%;vertical-align:top;float:left;zoom:1;*display:inline}html[dir="rtl"] .alert-item{float:right}@media(max-width:767px){.alert-item{width:100%;padding:0 8px}}.drag{opacity:.5}.drag+.drag-over,#content .drag-hidden{margin:0;height:0;outline-style:none}.drag-over{outline-style:dashed;height:80px;margin:10px 0}.drop-area{padding:5px 0}#jump-search{margin-bottom:5px}.icon-menu-section{margin-bottom:5px}.icon-container-body{padding-left:15px;padding-top:15px;clear:both;margin-left:0;margin-right:0;overflow:hidden;width:100%}html[dir="rtl"] .icon-container-body{padding-right:15px;padding-left:0}.item{float:left;height:60px;padding:0;text-align:left}html[dir="rtl"] .item{text-align:right;float:right}.icon{display:block;margin:auto}.itemContentWrapper{padding:0;width:100%}.itemImageWrapper{display:inline-block;vertical-align:middle}.itemTextWrapper{padding:10px 0 10px 5px;display:inline-block;vertical-align:middle;width:200px}html[dir="rtl"] .itemTextWrapper{padding:10px 5px 10px 0}.icon-menu-section .close,.icon-menu-section .close:hover,.icon-menu-section .close:active,.icon-menu-section .close:focus{opacity:1;color:#fff}@media(min-width:992px){html[dir="ltr"] #stats{padding-left:0}html[dir="rtl"] #stats{padding-right:0}}.app-name{text-transform:capitalize;padding:0 0 5px 0;display:block;word-break:break-all}.general-info-label{text-transform:capitalize;display:block}.general-info-value{display:block}.progress{margin:5px 0 5px 0}.progress-bar-disabled{background-color:#b2b2b2}.progress{height:4px;border-radius:0;box-shadow:none;background:#c8c8c8}.progress .progress-bar{box-shadow:none}.warning .app-stat-upgrade .fa-exclamation-triangle{color:#8a6d3b}.danger .app-stat-upgrade .fa-exclamation-triangle{color:#a94442}.success .progress-bar{background-color:#5cb85c}.info .progress-bar{background-color:#5bc0de}.warning .progress-bar{background-color:#f0ad4e}.danger .progress-bar{background-color:#d9534f}#statsSection tr.success.app-stat-row,#statsSection tr.info.app-stat-row{border-left:none}#statsSection tr.success td,#statsSection tr.info td{background:0}#statsSection .app-stat-upgrade{width:50px;padding:0;line-height:75px;text-align:center}.app-stat-upgrade a{display:none;height:100%;width:100%;text-align:center;color:#fff;background-color:#428bca}.warning>.app-stat-upgrade>a>i,.danger>.app-stat-upgrade>a>i{vertical-align:middle}.warning>.app-stat-upgrade>a,.danger>.app-stat-upgrade>a{display:inline-block}.updating-elements{display:inline-block}.application-list-loading-indicator{margin:auto;font-weight:500;font-size:36px;text-align:center;vertical-align:middle;padding:20px 0}
+        /* Embedding: /usr/local/cpanel/base/frontend/paper_lantern/css/angular-chosen-spinner.min.css */
+        .localytics-chosen.loading+.chosen-container-multi .chosen-choices{background-image:url('elements/spinner.gif');background-repeat:no-repeat;background-position:98%}html[dir="rtl"] .localytics-chosen.loading+.chosen-container-multi .chosen-choices{background-position:2%}.localytics-chosen.loading+.chosen-container-single .chosen-single span{background:url('elements/spinner.gif') no-repeat right}html[dir="rtl"] .localytics-chosen.loading+.chosen-container-single .chosen-single span{background:url('elements/spinner.gif') no-repeat left}.localytics-chosen.loading+.chosen-container-single .chosen-single .search-choice-close{display:none}
         
         /* Fix for layout */
-        #content {
+        #content .row {
             display: flex;
             flex-wrap: wrap;
         }
@@ -42,7 +47,7 @@
         }
         
         .search-hidden {
-            display: none;
+            display: none !important;
         }
         
         /* Responsive adjustments */
@@ -53,6 +58,8 @@
             }
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="elements/icon_spritemap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script type="text/javascript" src="elements/bootstrap.min.js"></script>
 </head>
@@ -71,6 +78,9 @@
                         <img id="imgLogo" class="navbar-brand-logo" src="elements/vplogo.png" alt="">
                         <font style="vertical-align: sub;"></font>
                     </a>
+                    <script type="text/ng-template" id="customTemplate.html">
+                        <a href="{{ match.model.url }}"></a>
+                    </script>
                     <div class="navbar-preferences form-inline">
                         <div class="btn-group">
                             <button id="btnUserPref" data-toggle="dropdown" class="btn dropdown-toggle user-preferences-btn">
@@ -85,6 +95,7 @@
                                 <li>
                                     <a id="lnkUserPrefUpdateContactInfo" href="changeemail.html">Update Contact Email</a>
                                 </li>
+                                <li></li>
                             </ul>
                         </div>
                         <a id="lnkHeaderLogout" target="_top" href="#" data-toggle="modal" data-target="#demo" class="btn link-buttons">
@@ -102,6 +113,8 @@
         <aside id="sidebar" class="ng-scope">
             <a id="lnkMenu" href="./" title="" class="active" data-toggle="tooltip" data-placement="right" data-original-title="Home">
                 <i class="fa fa-2x fa-th" id="imgMenu"></i>
+                <br><br>
+                <div style="position: float;left:100px; vertical-align:middle;"></div>
             </a>
         </aside>
         
@@ -130,9 +143,7 @@
                                 onkeyup="searchFunctions()">
                         </div>
 
-                        <!-- All your panel sections go here (Preferences, Files, Databases, etc.) -->
-                        <!-- I've kept the structure the same but added searchable classes -->
-                        
+                        <!-- All panel sections with searchable classes -->
                         <div class="searchable-section">
                             <div draggable="true" drag="handleDrag" id="preferences-group" class="panel panel-widget icon-menu-section" role="category">
                                 <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
@@ -164,9 +175,7 @@
                             </div>
                             <div drop-area="" drop="handleDrop" id="preferences-drop-area" class="drop-area"></div>
                         </div>
-                        
-                        <!-- Continue with all other sections (Files, Databases, Domains, etc.) -->
-                        <!-- Files Section -->
+
                         <div class="searchable-section">
                             <div draggable="true" drag="handleDrag" id="files-group" class="panel panel-widget icon-menu-section" role="category">
                                 <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
@@ -176,7 +185,7 @@
                                 <div id="files-body" class="panel-body icon-container-body">
                                     <div class="item searchable-item" role="page">
                                         <a id="icon-file_manager" class="itemImageWrapper integrations_icon spriteicon_img icon-file_manager" href="https://filemanager.ai/new/#/c/" target="_blank"></a>
-                                        <a id="item_file_manager" class="itemTextWrapper link"  href="https://filemanager.ai/new/#/c/" target="_blank">Online File Manager</a>
+                                        <a id="item_file_manager" class="itemTextWrapper link" href="https://filemanager.ai/new/#/c/" target="_blank">Online File Manager</a>
                                     </div>
                                     <div class="item searchable-item" role="page">
                                         <a id="icon-directory_privacy" class="itemImageWrapper integrations_icon spriteicon_img icon-directory_privacy" href="protectedfolders.html"></a>
@@ -184,24 +193,211 @@
                                     </div>
                                     <div class="item searchable-item" role="page">
                                         <a id="icon-disk_usage" class="itemImageWrapper integrations_icon spriteicon_img icon-disk_usage" href="diskspace.html"></a>
-                                        <a id="item_disk_usage" class="itemTextWrapper link"  href="diskspace.html">Disk Usage</a>
+                                        <a id="item_disk_usage" class="itemTextWrapper link" href="diskspace.html">Disk Usage</a>
                                     </div>
                                     <div class="item searchable-item" role="page">
                                         <a id="icon-ftp_accounts" class="itemImageWrapper integrations_icon spriteicon_img icon-ftp_accounts" href="ftpaccounts.html" target=""></a>
-                                        <a id="item_ftp_accounts" class="itemTextWrapper link"  href="ftpaccounts.html" >FTP Accounts</a>
+                                        <a id="item_ftp_accounts" class="itemTextWrapper link" href="ftpaccounts.html">FTP Accounts</a>
                                     </div>
                                     <div class="item searchable-item" role="page">
                                         <a id="icon-backup" class="itemImageWrapper integrations_icon spriteicon_img icon-backup" href="backup.html"></a>
-                                        <a id="item_backup" class="itemTextWrapper link"  href="backup.html">Backups</a>
+                                        <a id="item_backup" class="itemTextWrapper link" href="backup.html">Backups</a>
                                     </div>
                                 </div>
                             </div>
                             <div drop-area="" drop="handleDrop" id="files-drop-area" class="drop-area"></div>
                         </div>
-                        
-                        <!-- Continue with all other sections... -->
-                        <!-- For brevity, I've included just two sections. You would add all your other sections here -->
-                        
+
+                        <div class="searchable-section">
+                            <div draggable="true" drag="handleDrag" id="databases-group" class="panel panel-widget icon-menu-section" role="category">
+                                <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
+                                    <span id="databases-header" class="group-header">Databases</span>
+                                    <span id="databases-collapsed-indicator" class="group-header-indicator pull-right fa fa-minus"></span>
+                                </div>
+                                <div id="databases-body" class="panel-body icon-container-body">
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-php_my_admin" class="itemImageWrapper integrations_icon spriteicon_img icon-php_my_admin" href="pma.html"></a>
+                                        <a id="item_php_my_admin" class="itemTextWrapper link" href="pma.html">phpMyAdmin</a>
+                                    </div>
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-mysql_databases" class="itemImageWrapper integrations_icon spriteicon_img icon-mysql_databases" href="mysql.html"></a>
+                                        <a id="item_mysql_databases" class="itemTextWrapper link" href="mysql.html">MySQL Databases</a>
+                                    </div>
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-remote_mysql" class="itemImageWrapper integrations_icon spriteicon_img icon-remote_mysql" href="remotemysql.html"></a>
+                                        <a id="item_remote_mysql" class="itemTextWrapper link" href="remotemysql.html">Remote MySQL</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div drop-area="" drop="handleDrop" id="databases-drop-area" class="drop-area"></div>
+                        </div>
+
+                        <!-- Domains Section -->
+                        <div class="searchable-section">
+                            <div draggable="true" drag="handleDrag" id="domains-group" class="panel panel-widget icon-menu-section" role="category">
+                                <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
+                                    <span id="domains-header" class="group-header">Domains</span>
+                                    <span id="domains-collapsed-indicator" class="group-header-indicator pull-right fa fa-minus"></span>
+                                </div>
+                                <div id="domains-body" class="panel-body icon-container-body">
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-addon_domains" class="itemImageWrapper integrations_icon spriteicon_img icon-addon_domains" href="addondomains.html"></a>
+                                        <a id="item_addon_domains" class="itemTextWrapper link" href="addondomains.html">Addon Domains</a>
+                                    </div>
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-subdomains" class="itemImageWrapper integrations_icon spriteicon_img icon-subdomains" href="subdomains.html"></a>
+                                        <a id="item_subdomains" class="itemTextWrapper link" href="subdomains.html">Sub Domains</a>
+                                    </div>
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-aliases" class="itemImageWrapper integrations_icon spriteicon_img icon-aliases" href="parked.html"></a>
+                                        <a id="item_aliases" class="itemTextWrapper link" href="parked.html">Aliases (Parked Domains)</a>
+                                    </div>
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-redirects" class="itemImageWrapper integrations_icon spriteicon_img icon-redirects" href="redirect.html"></a>
+                                        <a id="item_redirects" class="itemTextWrapper link" href="redirect.html">Redirects</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div drop-area="" drop="handleDrop" id="domains-drop-area" class="drop-area"></div>
+                        </div>
+
+                        <!-- DNS Section -->
+                        <div class="searchable-section">
+                            <div draggable="true" drag="handleDrag" id="dns-group" class="panel panel-widget icon-menu-section" role="category">
+                                <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
+                                    <span id="dns-header" class="group-header">DNS</span>
+                                    <span id="dns-collapsed-indicator" class="group-header-indicator pull-right fa fa-minus"></span>
+                                </div>
+                                <div id="dns-body" class="panel-body icon-container-body">
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-simple_zone_editor" class="itemImageWrapper integrations_icon spriteicon_img icon-simple_zone_editor" href="records.html"></a>
+                                        <a id="item_dns_records" class="itemTextWrapper link" href="records.html">Manage Records</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div drop-area="" drop="handleDrop" id="dns-drop-area" class="drop-area"></div>
+                        </div>
+
+                        <!-- Email Section -->
+                        <div class="searchable-section">
+                            <div draggable="true" drag="handleDrag" id="email-group" class="panel panel-widget icon-menu-section" role="category">
+                                <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
+                                    <span id="email-header" class="group-header">Email - Coming Soon!</span>
+                                    <span id="email-collapsed-indicator" class="group-header-indicator pull-right fa fa-minus"></span>
+                                </div>
+                                <div id="email-body" class="panel-body icon-container-body">
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-accounts" class="itemImageWrapper integrations_icon spriteicon_img icon-accounts" href="mail.html"></a>
+                                        <a id="item-accounts" class="itemTextWrapper link" href="mail.html">Mail</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div drop-area="" drop="handleDrop" id="email-drop-area" class="drop-area"></div>
+                        </div>
+
+                        <!-- Metrics Section -->
+                        <div class="searchable-section">
+                            <div draggable="true" drag="handleDrag" id="metrics-group" class="panel panel-widget icon-menu-section" role="category">
+                                <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
+                                    <span id="metrics-header" class="group-header">Metrics</span>
+                                    <span id="metrics-collapsed-indicator" class="group-header-indicator pull-right fa fa-minus"></span>
+                                </div>
+                                <div id="metrics-body" class="panel-body icon-container-body">
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-awstats" class="itemImageWrapper integrations_icon spriteicon_img icon-awstats" href="accountstatistics.html"></a>
+                                        <a id="item_awstats" class="itemTextWrapper link" href="accountstatistics.html">Account Statistics</a>
+                                    </div>
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-errors" class="itemImageWrapper integrations_icon spriteicon_img icon-errors" href="errorlog.html"></a>
+                                        <a id="item_errors" class="itemTextWrapper link" href="errorlog.html">Error Logs</a>
+                                    </div>
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-php" class="itemImageWrapper integrations_icon spriteicon_img icon-php" href="phpinfo.html"></a>
+                                        <a id="item_php" class="itemTextWrapper link" href="phpinfo.html">General PHP Info</a>
+                                    </div>
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-raw_access" class="itemImageWrapper integrations_icon spriteicon_img icon-raw_access" href="accesslogs.html"></a>
+                                        <a id="item_raw_access" class="itemTextWrapper link" href="accesslogs.html">Access Logs</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div drop-area="" drop="handleDrop" id="metrics-drop-area" class="drop-area"></div>
+                        </div>
+
+                        <!-- Security Section -->
+                        <div class="searchable-section">
+                            <div draggable="true" drag="handleDrag" id="security-group" class="panel panel-widget icon-menu-section" role="category">
+                                <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
+                                    <span id="security-header" class="group-header">Security</span>
+                                    <span id="security-collapsed-indicator" class="group-header-indicator pull-right fa fa-minus"></span>
+                                </div>
+                                <div id="security-body" class="panel-body icon-container-body">
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-ip_blocker" class="itemImageWrapper integrations_icon spriteicon_img icon-ip_blocker" href="deny_ip.html"></a>
+                                        <a id="item_ip_blocker" class="itemTextWrapper link" href="deny_ip.html">IP Blocker</a>
+                                    </div>
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-ssl_tls" class="itemImageWrapper integrations_icon spriteicon_img icon-ssl_tls" href="sslcert.html"></a>
+                                        <a id="item_ssl_tls" class="itemTextWrapper link" href="sslcert.html">SSL/TLS</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div drop-area="" drop="handleDrop" id="security-drop-area" class="drop-area"></div>
+                        </div>
+
+                        <!-- Software Section -->
+                        <div class="searchable-section">
+                            <div draggable="true" drag="handleDrag" id="software-group" class="panel panel-widget icon-menu-section" role="category">
+                                <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
+                                    <span id="software-header" class="group-header">Software</span>
+                                    <span id="software-collapsed-indicator" class="group-header-indicator pull-right fa fa-minus"></span>
+                                </div>
+                                <div id="software-body" class="panel-body icon-container-body">
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-attracta_seotips" class="itemImageWrapper integrations_icon spriteicon_img icon-attracta_seotips" href="http://31.22.7.79/" target="_blank"></a>
+                                        <a id="item_attracta_seotips" class="itemTextWrapper link" href="http://31.22.7.79/" target="_blank">SEO Tools</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div drop-area="" drop="handleDrop" id="software-drop-area" class="drop-area"></div>
+                        </div>
+
+                        <!-- Support Section -->
+                        <div class="searchable-section">
+                            <div draggable="true" drag="handleDrag" id="support-group" class="panel panel-widget icon-menu-section" role="category">
+                                <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
+                                    <span id="support-header" class="group-header">Support</span>
+                                    <span id="support-collapsed-indicator" class="group-header-indicator pull-right fa fa-minus"></span>
+                                </div>
+                                <div id="support-body" class="panel-body icon-container-body">
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-cloudflare_performance" class="itemImageWrapper integrations_icon spriteicon_img icon-cloudflare_performance" href="tutorialdomain.html" target=""></a>
+                                        <a id="item_cloudflare_performance" class="itemTextWrapper link" href="tutorialdomain.html" target="">Domain Types</a>
+                                    </div>
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-cloudflare_analytics" class="itemImageWrapper integrations_icon spriteicon_img icon-cloudflare_analytics" href="https://tutorials.securesignup.net/" target="_blank"></a>
+                                        <a id="item_cloudflare_analytics" class="itemTextWrapper link" href="http://tutorials.securesignup.net/" target="_blank">Tutorials</a>
+                                    </div>
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-attracta_seotools" class="itemImageWrapper integrations_icon spriteicon_img icon-attracta_seotools" href="#" data-toggle="modal" data-target="#demo" target=""></a>
+                                        <a id="item_attracta_seotools" class="itemTextWrapper link" href="#" data-toggle="modal" data-target="#demo" target="">Support Forum</a>
+                                    </div>
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-createticket" class="itemImageWrapper integrations_icon spriteicon_img icon-createticket" href="newticket.html"></a>
+                                        <a id="item_createticket" class="itemTextWrapper link" href="newticket.html">Create New Ticket</a>
+                                    </div>
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-ShowTickets" class="itemImageWrapper integrations_icon spriteicon_img icon-ShowTickets" href="opentickets.html"></a>
+                                        <a id="item_ShowTickets" class="itemTextWrapper link" href="opentickets.html">Open Support Tickets</a>
+                                    </div>
+                                    <div class="item searchable-item" role="page">
+                                        <a id="icon-api_shell" class="itemImageWrapper integrations_icon spriteicon_img icon-api_shell" href="closedtickets.html"></a>
+                                        <a id="item_api_shell" class="itemTextWrapper link" href="closedtickets.html">Closed Support Tickets</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div drop-area="" drop="handleDrop" id="support-drop-area" class="drop-area"></div>
+                        </div>
                     </div>
                 </div>
                 
@@ -408,17 +604,17 @@
             
             // Reset all highlights first
             document.querySelectorAll('.search-highlight').forEach(el => {
-                el.classList.remove('search-highlight');
+                const parent = el.parentElement;
+                parent.innerHTML = parent.textContent;
             });
             
             // If search is empty, show everything
             if (searchTerm === '') {
                 items.forEach(item => {
-                    item.classList.remove('search-hidden');
-                    item.parentElement.parentElement.parentElement.classList.remove('search-hidden');
+                    item.style.display = '';
                 });
                 sections.forEach(section => {
-                    section.classList.remove('search-hidden');
+                    section.style.display = '';
                 });
                 return;
             }
@@ -431,7 +627,7 @@
                 const link = item.querySelector('.itemTextWrapper');
                 
                 if (itemText.includes(searchTerm)) {
-                    item.classList.remove('search-hidden');
+                    item.style.display = '';
                     
                     // Highlight the matching text
                     if (link) {
@@ -440,21 +636,26 @@
                         link.innerHTML = originalText.replace(regex, '<span class="search-highlight">$1</span>');
                     }
                     
-                    // Show the parent section
-                    item.parentElement.parentElement.parentElement.classList.remove('search-hidden');
                     hasResults = true;
                 } else {
-                    item.classList.add('search-hidden');
+                    item.style.display = 'none';
                 }
             });
             
             // Hide sections with no visible items
             sections.forEach(section => {
-                const visibleItems = section.querySelectorAll('.searchable-item:not(.search-hidden)');
-                if (visibleItems.length === 0) {
-                    section.classList.add('search-hidden');
+                const visibleItems = section.querySelectorAll('.searchable-item');
+                let hasVisible = false;
+                visibleItems.forEach(item => {
+                    if (item.style.display !== 'none') {
+                        hasVisible = true;
+                    }
+                });
+                
+                if (!hasVisible) {
+                    section.style.display = 'none';
                 } else {
-                    section.classList.remove('search-hidden');
+                    section.style.display = '';
                 }
             });
             
