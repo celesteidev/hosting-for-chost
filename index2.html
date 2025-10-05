@@ -401,164 +401,175 @@
                     </div>
                 </div>
                 
-                <!-- Statistics and Account Details - Now properly positioned on the right -->
-                <div id="stats" class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <div id="statsSection" class="panel panel-widget">
-                        <div id="statsHeaderSection" class="panel-heading widget-heading">
-                            Statistics
-                            <i spinner="" id="loadingStatsSpinner" glyph-class="fa fa-spinner" class="pull-right fa fa-spinner ng-hide" title="Loading"></i>
-                        </div>
-                        <table class="table" id="stats" cellspacing="0" cellpadding="0">
-                            <tbody>
-                                <tr class="row-odd">
-                                    <td class="stats_left">Plan:</td>
-                                    <td class="stats_right">Free Hosting</td>
-                                </tr>
-                                <tr class="row-even">
-                                    <td class="stats_left">FTP accounts:</td>
-                                    <td class="stats_right">1 / 1</td>
-                                </tr>
-                                <tr class="row-odd">
-                                    <td class="stats_left">Sub-Domains:</td>
-                                    <td class="stats_right">
-                                        1 / Unlimited
-                                        <div class="stats_progress_bar">
-                                            <div class="cpanel_widget_progress_bar_percent" style="display:none">0</div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row-even">
-                                    <td class="stats_left">Add-on Domains:</td>
-                                    <td class="stats_right">
-                                        1 / Unlimited
-                                        <div class="stats_progress_bar">
-                                            <div class="cpanel_widget_progress_bar_percent" style="display:none">0</div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row-odd">
-                                    <td class="stats_left">Parked Domains:</td>
-                                    <td class="stats_right">
-                                        1 / Unlimited
-                                        <div class="stats_progress_bar">
-                                            <div class="cpanel_widget_progress_bar_percent" style="display:none">0</div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row-even">
-                                    <td class="stats_left">MySQL Databases:</td>
-                                    <td class="stats_right">
-                                        1 / Unlimited
-                                        <div class="stats_progress_bar">
-                                            <div class="cpanel_widget_progress_bar_percent" style="display:none">0</div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row-odd">
-                                    <td class="stats_left">Disk Quota:</td>
-                                    <td class="stats_right">Unlimited</td>
-                                </tr>
-                                <tr class="row-even">
-                                    <td class="stats_left">Disk Space Used:</td>
-                                    <td class="stats_right">
-                                        0 MB
-                                        <div class="stats_progress_bar">
-                                            <div class="cpanel_widget_progress_bar_percent" style="display:none">0</div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row-odd">
-                                    <td class="stats_left">Disk Free:</td>
-                                    <td class="stats_right">Unlimited</td>
-                                </tr>
-                                <tr class="row-even">
-                                    <td class="stats_left">Inodes Used:</td>
-                                    <td class="stats_right">0 % (0 of 30019)</td>
-                                </tr>
-                                <tr class="row-odd">
-                                    <td class="stats_left">Bandwidth:</td>
-                                    <td class="stats_right">Unlimited</td>
-                                </tr>
-                                <tr class="row-odd">
-                                    <td class="stats_left">Bandwidth used:</td>
-                                    <td class="stats_right">
-                                        0 MB
-                                        <div class="stats_progress_bar">
-                                            <div class="cpanel_widget_progress_bar_percent" style="display:none">0 </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row-even">
-                                    <td class="stats_left">Bandwidth remaining:</td>
-                                    <td class="stats_right">Unlimited</td>
-                                </tr>
-                                <tr class="row-odd">
-                                    <td class="stats_left">Daily Hits Used:</td>
-                                    <td class="stats_right">
-                                        0 % (0 of 50000) 
-                                        <div class="stats_progress_bar">
-                                            <div class="cpanel_widget_progress_bar_percent" style="display:none">0</div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <div id="statsSection" class="panel panel-widget">
-                        <div id="statsHeaderSection" class="panel-heading widget-heading">
-                            Account Details
-                            <i spinner="" id="loadingStatsSpinner" glyph-class="fa fa-spinner" class="pull-right fa fa-spinner ng-hide" title="Loading …"></i>
-                        </div>
-                        <div id="content-stats" class="newContent">
-                            <div id="stats-header"></div>
-                        </div>
-                        <table class="table" id="stats" cellspacing="0" cellpadding="0">
-                            <tbody>
-                                <tr class="row-odd">
-                                    <td class="stats_left">Main Domain:</td>
-                                    <td class="stats_right"><small>YOURDOMAIN</small></td>
-                                </tr>
-                                <tr class="row-even">
-                                    <td class="stats_left">FTP hostname:</td>
-                                    <td class="stats_right">ftpupload.net</td>
-                                </tr>
-                                <tr class="row-odd">
-                                    <td class="stats_left">FTP username:</td>
-                                    <td class="stats_right">YOURPREFIX_DEMO</td>
-                                </tr>
-                                <tr class="row-even">
-                                    <td class="stats_left">MySQL hostname:</td>
-                                    <td class="stats_right">YOURSQL</td>
-                                </tr>
-                                <tr class="row-odd">
-                                    <td class="stats_left">MySQL username:</td>
-                                    <td class="stats_right">YOURPREFIX_DEMO</td>
-                                </tr>
-                                <tr class="row-even">
-                                    <td class="stats_left">Hosting Volume:</td>
-                                    <td class="stats_right">DEMO</td>
-                                </tr>
-                                <tr>
-                                    <td class="stats_left"></td>
-                                    <td class="stats_right"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table" id="stats" cellspacing="0" cellpadding="0">
-                            <tbody>
-                                <tr>
-                                    <td class="stats_left">Home Directory:<br><small><small>/home/DEMO/demo.domain/www/</small></small>
-                                        <br>
-                                        <a class="btn btn-info" href="accountsettings.html">More account settings</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+               <div id="stats" class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+               <div id="statsSection" class="panel panel-widget">
+                  <div id="statsHeaderSection" class="panel-heading widget-heading">
+                     Statistics                <i spinner="" id="loadingStatsSpinner" glyph-class="fa fa-spinner" class="pull-right fa fa-spinner ng-hide" title="Loading �~@�"></i>
+                  </div>
+                  <table class="table" id="stats" cellspacing="0" cellpadding="0">
+                     <tbody>
+                        <tr class="row-odd">
+                           <td class="stats_left">Plan:</td>
+                           <td class="stats_right">Free Hosting</td>
+                        </tr>
+                        <tr class="row-even">
+                           <td class="stats_left">FTP accounts:</td>
+                           <td class="stats_right">1 / 1</td>
+                        </tr>
+                        <tr class="row-odd">
+                           <td class="stats_left">Sub-Domains:</td>
+                           <td class="stats_right">
+                              1 / Unlimited
+                              <div class="stats_progress_bar">
+                                 <div class="cpanel_widget_progress_bar_percent" style="display:none">0</div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="row-even">
+                           <td class="stats_left">Add-on Domains:</td>
+                           <td class="stats_right">
+                              1 / Unlimited
+                              <div class="stats_progress_bar">
+                                 <div class="cpanel_widget_progress_bar_percent" style="display:none">0</div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="row-odd">
+                           <td class="stats_left">Parked Domains:</td>
+                           <td class="stats_right">
+                              1 / Unlimited
+                              <div class="stats_progress_bar">
+                                 <div class="cpanel_widget_progress_bar_percent" style="display:none">0</div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="row-even">
+                           <td class="stats_left">MySQL Databases:</td>
+                           <td class="stats_right">
+                              1 / Unlimited
+                              <div class="stats_progress_bar">
+                                 <div class="cpanel_widget_progress_bar_percent" style="display:none">0</div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="row-odd">
+                           <td class="stats_left">Disk Quota:</td>
+                           <td class="stats_right">
+                              Unlimited
+                           </td>
+                        </tr>
+                        <tr class="row-even">
+                           <td class="stats_left">Disk Space Used:</td>
+                           <td class="stats_right">
+                              0 MB
+                              <div class="stats_progress_bar">
+                                 <div class="cpanel_widget_progress_bar_percent" style="display:none">0</div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="row-odd">
+                           <td class="stats_left">Disk Free:</td>
+                           <td class="stats_right">
+                              Unlimited
+                           </td>
+                        </tr>
+                        <tr class="row-even">
+                           <td class="stats_left">Inodes Used:</td>
+                           <td class="stats_right">
+                              0 % (0 of 30019)
+                           </td>
+                        </tr>
+                        <tr class="row-odd">
+                           <td class="stats_left">Bandwidth:</td>
+                           <td class="stats_right">Unlimited        </td>
+                        </tr>
+                        <tr class="row-odd">
+                           <td class="stats_left">Bandwidth used:</td>
+                           <td class="stats_right">
+                              0 MB
+                              <div class="stats_progress_bar">
+                                 <div class="cpanel_widget_progress_bar_percent" style="display:none">0 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="row-even">
+                           <td class="stats_left">Bandwidth remaining:</td>
+                           <td class="stats_right">
+                              Unlimited  
+                           </td>
+                        </tr>
+                        <tr class="row-odd">
+                           <td class="stats_left">Daily Hits Used:
+                           </td>
+                           <td class="stats_right">
+                              0 % (0 of 50000) 
+                              <div class="stats_progress_bar">
+                                 <div class="cpanel_widget_progress_bar_percent" style="display:none">0</div>
+                              </div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div id="statsSection" class="panel panel-widget">
+                  <div id="statsHeaderSection" class="panel-heading widget-heading">
+                     Account Details                <i spinner="" id="loadingStatsSpinner" glyph-class="fa fa-spinner" class="pull-right fa fa-spinner ng-hide" title="Loading …"></i>
+                  </div>
+                  <div id="content-stats" class="newContent">
+                     <div id="stats-header">
+                     </div>
+                  </div>
+                  <table class="table" id="stats" cellspacing="0" cellpadding="0">
+                     <tbody>
+                        <tr class="row-odd">
+                           <td class="stats_left">Main Domain:</td>
+                           <td class="stats_right"><small>YOURDOMAIN</small></td>
+                        </tr>
+                        <tr class="row-even">
+                           <td class="stats_left">FTP hostname:</td>
+                           <td class="stats_right">ftpupload.net</td>
+                        </tr>
+                        <tr class="row-odd">
+                           <td class="stats_left">FTP username:</td>
+                           <td class="stats_right">YOURPREFIX_DEMO</td>
+                        </tr>
+                        <tr class="row-even">
+                           <td class="stats_left">MySQL hostname:</td>
+                           <td class="stats_right">YOURSQL</td>
+                        </tr>
+                        <tr class="row-odd">
+                           <td class="stats_left">MySQL username:</td>
+                           <td class="stats_right">YOURPREFIX_DEMO</td>
+                        </tr>
+                        <tr class="row-even">
+                           <td class="stats_left">Hosting Volume:</td>
+                           <td class="stats_right">DEMO</td>
+                        </tr>
+                        <tr>
+                           <td class="stats_left"></td>
+                           <td class="stats_right"></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table class="table" id="stats" cellspacing="0" cellpadding="0">
+                     <tbody>
+                        <tr>
+                           <td class="stats_left">Home Directory:<br><small><small>/home/DEMO/demo.domain/www/</small></small>
+                              <br>
+                              <a class="btn btn-info" href="accountsettings.html">More account settings</a>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <!-- end content-stats -->
+               <div style="text-align:left; position: float;right:00px; vertical-align:left;"></div>
             </div>
-        </div>
+         </div>
+         <!-- end sub -->
+      </div>
+      <!-- end stats -->
+      </div>
         <!-- PAGE TEMPLATE'S CONTENT END -->
         
         <footer>
