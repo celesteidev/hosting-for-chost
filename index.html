@@ -94,9 +94,8 @@
                      <div class="application-list-loading-indicator ng-hide">
                         <span class="fa fa-spinner fa-spin fa-lg"></span> Loading …
                      </div>
-
-                     <!-- Jump Search -->
-                     <div id="jump-search" class="form-group" style="margin-bottom: 20px;">
+                     <div id="jump-search" class="">
+                        <div align="center"></div>
                         <input
                            id="quickjump"
                            type="text"
@@ -104,13 +103,12 @@
                            ng-model="searchText"
                            ng-keyup="clearSearch($event)"
                            placeholder="[DISABLED IN DEMO] Find functions quickly by typing here."
-                           name=""
-                           style="max-width: 400px; margin: 0 auto; display: block;">
+                           name="">
                      </div>
 
-                     <!-- Preferences Panel -->
-                     <div class="icon-menu-section">
-                        <div draggable="true" drag="handleDrag" id="preferences-group" class="panel panel-widget" role="category">
+                     <!-- ngRepeat: group in applicationList track by group.group -->
+                     <div class="">
+                        <div draggable="true" drag="handleDrag" id="preferences-group" class="panel panel-widget icon-menu-section" role="category">
                            <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
                               <span id="preferences-header" class="group-header">Preferences</span>
                               <span id="preferences-collapsed-indicator" class="group-header-indicator pull-right fa fa-minus"></span>
@@ -133,8 +131,8 @@
                                  <a id="item_backup_wizard" class="itemTextWrapper link" href="gettingstarted.html">Getting Started</a>
                               </div>
                               <div class="item" role="page">
-                                 <a id="icon-user_manager" class="itemImageWrapper integrations_icon spriteicon_img icon-user_manager" href="accountsettings.html"></a>
-                                 <a id="item_user_manager" class="itemTextWrapper link" href="accountsettings.html">Account Settings</a>
+                                 <a id="icon-two_factor_authentication" class="itemImageWrapper integrations_icon spriteicon_img icon-two_factor_authentication" href="upgrade.html"></a>
+                                 <a id="item_two_factor_authentication" class="itemTextWrapper link" href="upgrade.html">Account Upgrades</a>
                               </div>
                            </div>
                         </div>
