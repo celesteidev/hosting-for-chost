@@ -94,53 +94,61 @@
                      <div class="application-list-loading-indicator ng-hide">
                         <span class="fa fa-spinner fa-spin fa-lg"></span> Loading …
                      </div>
-                     <div id="jump-search" class="">
-                        <div align="center">
-                        </div>
-                        <input id="quickjump" type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="searchText" ng-keyup="clearSearch($event)" placeholder="[DISABLED IN DEMO] Find functions quickly by typing here." name="">
-                     <!-- ngRepeat: group in applicationList track by group.group -->
-                     <div class="">
-                        <div draggable="true" drag="handleDrag" id="preferences-group" class="panel panel-widget icon-menu-section" role="category">
-                           <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
-                              <span id="preferences-header" class="group-header">Preferences</span>
-                              <span id="preferences-collapsed-indicator" class="group-header-indicator pull-right fa fa-minus"></span>
-                           </div>
-                           <div id="preferences-body" class="panel-body icon-container-body">
-                              <!-- ngRepeat: item in ::group.items track by item.file -->
-                              <div class="item" role="page">
-                                 <a id="icon-change_password" class="itemImageWrapper integrations_icon spriteicon_img icon-change_password" href="changepassword.html">
-                                 </a>
-                                 <a id="item_change_password" class="itemTextWrapper link"  href="changepassword.html"">Change Password</a>
-                              </div>
-                              <!-- end ngRepeat: item in ::group.items track by item.file -->
-                              <div class="item" role="page">
-                                 <a id="icon-change_language" class="itemImageWrapper integrations_icon spriteicon_img icon-change_language" href="changelanguage.html">
-                                 </a>
-                                 <a id="item_change_language" class="itemTextWrapper link"  href="changelanguage.html">Change Language</a>
-                              </div>
-                              <!-- end ngRepeat: item in ::group.items track by item.file -->
-                              <div class="item" role="page">
-                                 <a id="icon-contact_information" class="itemImageWrapper integrations_icon spriteicon_img icon-contact_information" href="changeemail.html">
-                                 </a>
-                                 <a id="item_contact_information" class="itemTextWrapper link"  href="changeemail.html">Update Contact Email</a>
-                              </div>
-                              <!-- end ngRepeat: item in ::group.items track by item.file -->
-                              <div class="item" role="page">
-                                 <a id="icon-backup_wizard" class="itemImageWrapper integrations_icon spriteicon_img icon-backup_wizard" href="gettingstarted.html">
-                                 </a>
-                                 <a id="item_backup_wizard" class="itemTextWrapper link"  href="gettingstarted.html"">Getting Started</a>
-                              </div>
-                              <!-- end ngRepeat: item in ::group.items track by item.file -->
-                              <div class="item" role="page">
-                                 <a id="icon-user_manager" class="itemImageWrapper integrations_icon spriteicon_img icon-user_manager" href="accountsettings.html">
-                                 </a>
-                                 <a id="item_user_manager" class="itemTextWrapper link"  href="accountsettings.html">Account Settings</a>
-                              </div>
-                              <!-- end ngRepeat: item in ::group.items track by item.file -->
-                           </div>
-                        </div>
-                        <div drop-area="" drop="handleDrop" id="preferences-drop-area" class="drop-area"></div>
-                     </div>
+                    <div id="jump-search" class="" style="margin-bottom: 15px;">
+   <div align="center">
+   </div>
+   <input id="quickjump" 
+      type="text" 
+      class="form-control ng-pristine ng-untouched ng-valid" 
+      ng-model="searchText" 
+      ng-keyup="clearSearch($event)" 
+      placeholder="[DISABLED IN DEMO] Find functions quickly by typing here." 
+      name=""
+      style="max-width: 400px; margin: 0 auto; display: block;">
+</div>
+
+<!-- ngRepeat: group in applicationList track by group.group -->
+<div class="">
+   <div draggable="true" drag="handleDrag" id="preferences-group" class="panel panel-widget icon-menu-section" role="category" style="margin-top: 20px;">
+      <div class="panel-heading widget-heading widget-draggable" ng-dblclick="toggleGroup(group.group)">
+         <span id="preferences-header" class="group-header">Preferences</span>
+         <span id="preferences-collapsed-indicator" class="group-header-indicator pull-right fa fa-minus"></span>
+      </div>
+      <div id="preferences-body" class="panel-body icon-container-body">
+         <!-- Change Password -->
+         <div class="item" role="page">
+            <a id="icon-change_password" class="itemImageWrapper integrations_icon spriteicon_img icon-change_password" href="changepassword.html"></a>
+            <a id="item_change_password" class="itemTextWrapper link" href="changepassword.html">Change Password</a>
+         </div>
+
+         <!-- Change Language -->
+         <div class="item" role="page">
+            <a id="icon-change_language" class="itemImageWrapper integrations_icon spriteicon_img icon-change_language" href="changelanguage.html"></a>
+            <a id="item_change_language" class="itemTextWrapper link" href="changelanguage.html">Change Language</a>
+         </div>
+
+         <!-- Update Contact Email -->
+         <div class="item" role="page">
+            <a id="icon-contact_information" class="itemImageWrapper integrations_icon spriteicon_img icon-contact_information" href="changeemail.html"></a>
+            <a id="item_contact_information" class="itemTextWrapper link" href="changeemail.html">Update Contact Email</a>
+         </div>
+
+         <!-- Getting Started -->
+         <div class="item" role="page">
+            <a id="icon-backup_wizard" class="itemImageWrapper integrations_icon spriteicon_img icon-backup_wizard" href="gettingstarted.html"></a>
+            <a id="item_backup_wizard" class="itemTextWrapper link" href="gettingstarted.html">Getting Started</a>
+         </div>
+
+         <!-- Account Settings -->
+         <div class="item" role="page">
+            <a id="icon-user_manager" class="itemImageWrapper integrations_icon spriteicon_img icon-user_manager" href="accountsettings.html"></a>
+            <a id="item_user_manager" class="itemTextWrapper link" href="accountsettings.html">Account Settings</a>
+         </div>
+      </div>
+   </div>
+   <div drop-area="" drop="handleDrop" id="preferences-drop-area" class="drop-area"></div>
+</div>
+
                      <!-- end ngRepeat: group in applicationList track by group.group -->
                      <div class="">
                         <div draggable="true" drag="handleDrag" id="files-group" class="panel panel-widget icon-menu-section" role="category">
