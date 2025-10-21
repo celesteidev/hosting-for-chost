@@ -4,334 +4,403 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>cPanel Icons - Downloadable</title>
-<link rel="icon" href="elements/favicon.ico" type="image/x-icon">
 <style>
-  /* Spritemap base for all icons */
-  .spriteicon_img {
-    background-image: url('elements/icon_spritemap.png');
-    background-repeat: no-repeat;
-    display: block;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
-  /* Grid layout */
-  #grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 20px;
-    justify-content: center;
-  }
-
-  .grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 120px;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 12px;
-    padding: 10px;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    transition: all 0.2s ease;
-  }
-
-  .grid-item:hover {
-    background-color: #f0f0f0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-
-  .icon-label {
-    margin-top: 5px;
-    word-break: break-word;
-    font-weight: bold;
-  }
-
-  .icon-class {
-    margin-top: 2px;
-    font-size: 10px;
-    color: gray;
-    word-break: break-all;
-  }
-
-  .download-btn {
-    margin-top: 8px;
-    padding: 4px 8px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 10px;
-    transition: background-color 0.2s;
-  }
-
-  .download-btn:hover {
-    background-color: #45a049;
-  }
-
-  h2 {
-    text-align: center;
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
     color: #333;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    color: #1a2a6c;
     margin-bottom: 10px;
+    font-size: 2.5rem;
   }
 
   .subtitle {
-    text-align: center;
     color: #666;
+    font-size: 1.2rem;
     margin-bottom: 20px;
-    font-style: italic;
   }
 
-  /* Individual icon positioning */
-  .icon-ShowTickets,.icon-SiteLock,.icon-accounts,.icon-addon_domains,.icon-address_importer,.icon-advanced_zone_editor,.icon-aliases,.icon-analog_stats,.icon-anonymous_ftp,.icon-apache_handlers,.icon-apache_spam_assassin,.icon-api_shell,.icon-archive,.icon-attracta_getingoogle,.icon-attracta_googlewebsiteservices,.icon-attracta_increasewebsitetraffic,.icon-attracta_linkbuilding,.icon-attracta_one-clicksitemap,.icon-attracta_seotips,.icon-attracta_seotools,.icon-authentication,.icon-autoresponders,.icon-awstats,.icon-backup,.icon-backup_wizard,.icon-bandwidth,.icon-boxtrapper,.icon-calendar_and_contacts,.icon-change_language,.icon-change_password,.icon-change_style,.icon-cloudflare,.icon-cloudflare_analytics,.icon-cloudflare_performance,.icon-cloudflare_security,.icon-cloudflare_status,.icon-cloudflare_support,.icon-contact_information,.icon-cpu_and_concurrent_connection_usage,.icon-createticket,.icon-cron_jobs,.icon-default_address,.icon-directory_privacy,.icon-disk_usage,.icon-email_filters,.icon-encryption,.icon-enduserlve,.icon-error_pages,.icon-errors,.icon-file_manager,.icon-forwarders,.icon-ftp_accounts,.icon-ftp_connections,.icon-global_email_filters,.icon-greylisting,.icon-group_advanced,.icon-group_databases,.icon-group_domains,.icon-group_email,.icon-group_files,.icon-group_metrics,.icon-group_security,.icon-group_software,.icon-hotlink_protection,.icon-images,.icon-indexes,.icon-ip_blocker,.icon-leech_protection,.icon-letsencrypt-cpanel,.icon-lvephpsel,.icon-lvepythonsel,.icon-lverubysel,.icon-mailing_lists,.icon-metrics_editor,.icon-mime_types,.icon-mod_security,.icon-multiphp_configuration,.icon-multiphp_ini_editor,.icon-multiphp_manager,.icon-mx_entry,.icon-mysql_database_wizard,.icon-mysql_databases,.icon-optimize_website,.icon-perl_modules,.icon-php,.icon-php_my_admin,.icon-php_pear_packages,.icon-php_pg_admin,.icon-postgresql_database_wizard,.icon-postgresql_databases,.icon-raw_access,.icon-redirects,.icon-remote_mysql,.icon-ruby_gems,.icon-ruby_on_rails,.icon-scriptactivity,.icon-security_policy,.icon-simple_zone_editor,.icon-site_publisher,.icon-site_software,.icon-sitereptile,.icon-soft_div_icons,.icon-softaculous,.icon-ssh_access,.icon-ssl_management,.icon-ssl_storage,.icon-ssl_tls,.icon-subdomains,.icon-support,.icon-third_party_plugins,.icon-tls_wizard,.icon-track_delivery,.icon-track_dns,.icon-two_factor_authentication,.icon-user_manager,.icon-virus_scanner,.icon-visitors,.icon-web_disk,.icon-web_host_manager,.icon-webalizer,.icon-webalizer_ftp { background-image: url('elements/icon_spritemap.png'); background-repeat: no-repeat; }
-  .icon-ShowTickets { background-position: -5px -5px; width: 48px; height: 48px; }
-  .icon-SiteLock { background-position: -63px -5px; width: 48px; height: 48px; }
-  .icon-accounts { background-position: -5px -63px; width: 48px; height: 48px; }
-  .icon-addon_domains { background-position: -63px -63px; width: 48px; height: 48px; }
-  .icon-address_importer { background-position: -121px -5px; width: 48px; height: 48px; }
-  .icon-advanced_zone_editor { background-position: -121px -63px; width: 48px; height: 48px; }
-  .icon-aliases { background-position: -5px -121px; width: 48px; height: 48px; }
-  .icon-analog_stats { background-position: -63px -121px; width: 48px; height: 48px; }
-  .icon-anonymous_ftp { background-position: -121px -121px; width: 48px; height: 48px; }
-  .icon-apache_handlers { background-position: -179px -5px; width: 48px; height: 48px; }
-  .icon-apache_spam_assassin { background-position: -179px -63px; width: 48px; height: 48px; }
-  .icon-api_shell { background-position: -179px -121px; width: 48px; height: 48px; }
-  .icon-archive { background-position: -5px -179px; width: 48px; height: 48px; }
-  .icon-attracta_getingoogle { background-position: -63px -179px; width: 48px; height: 48px; }
-  .icon-attracta_googlewebsiteservices { background-position: -121px -179px; width: 48px; height: 48px; }
-  .icon-attracta_increasewebsitetraffic { background-position: -179px -179px; width: 48px; height: 48px; }
-  .icon-attracta_linkbuilding { background-position: -237px -5px; width: 48px; height: 48px; }
-  .icon-attracta_one-clicksitemap { background-position: -237px -63px; width: 48px; height: 48px; }
-  .icon-attracta_seotips { background-position: -237px -121px; width: 48px; height: 48px; }
-  .icon-attracta_seotools { background-position: -237px -179px; width: 48px; height: 48px; }
-  .icon-authentication { background-position: -5px -237px; width: 48px; height: 48px; }
-  .icon-autoresponders { background-position: -63px -237px; width: 48px; height: 48px; }
-  .icon-awstats { background-position: -121px -237px; width: 48px; height: 48px; }
-  .icon-backup { background-position: -179px -237px; width: 48px; height: 48px; }
-  .icon-backup_wizard { background-position: -237px -237px; width: 48px; height: 48px; }
-  .icon-bandwidth { background-position: -295px -5px; width: 48px; height: 48px; }
-  .icon-boxtrapper { background-position: -295px -63px; width: 48px; height: 48px; }
-  .icon-calendar_and_contacts { background-position: -295px -121px; width: 48px; height: 48px; }
-  .icon-change_language { background-position: -295px -179px; width: 48px; height: 48px; }
-  .icon-change_password { background-position: -295px -237px; width: 48px; height: 48px; }
-  .icon-change_style { background-position: -5px -295px; width: 48px; height: 48px; }
-  .icon-cloudflare { background-position: -63px -295px; width: 48px; height: 48px; }
-  .icon-cloudflare_analytics { background-position: -121px -295px; width: 48px; height: 48px; }
-  .icon-cloudflare_performance { background-position: -179px -295px; width: 48px; height: 48px; }
-  .icon-cloudflare_security { background-position: -237px -295px; width: 48px; height: 48px; }
-  .icon-cloudflare_status { background-position: -295px -295px; width: 48px; height: 48px; }
-  .icon-cloudflare_support { background-position: -353px -5px; width: 48px; height: 48px; }
-  .icon-contact_information { background-position: -353px -63px; width: 48px; height: 48px; }
-  .icon-cpu_and_concurrent_connection_usage { background-position: -353px -121px; width: 48px; height: 48px; }
-  .icon-createticket { background-position: -353px -179px; width: 48px; height: 48px; }
-  .icon-cron_jobs { background-position: -353px -237px; width: 48px; height: 48px; }
-  .icon-default_address { background-position: -353px -295px; width: 48px; height: 48px; }
-  .icon-directory_privacy { background-position: -5px -353px; width: 48px; height: 48px; }
-  .icon-disk_usage { background-position: -63px -353px; width: 48px; height: 48px; }
-  .icon-email_filters { background-position: -121px -353px; width: 48px; height: 48px; }
-  .icon-encryption { background-position: -179px -353px; width: 48px; height: 48px; }
-  .icon-enduserlve { background-position: -237px -353px; width: 48px; height: 48px; }
-  .icon-error_pages { background-position: -295px -353px; width: 48px; height: 48px; }
-  .icon-errors { background-position: -353px -353px; width: 48px; height: 48px; }
-  .icon-file_manager { background-position: -411px -5px; width: 48px; height: 48px; }
-  .icon-forwarders { background-position: -411px -63px; width: 48px; height: 48px; }
-  .icon-ftp_accounts { background-position: -411px -121px; width: 48px; height: 48px; }
-  .icon-ftp_connections { background-position: -411px -179px; width: 48px; height: 48px; }
-  .icon-global_email_filters { background-position: -411px -237px; width: 48px; height: 48px; }
-  .icon-greylisting { background-position: -411px -295px; width: 48px; height: 48px; }
-  .icon-group_advanced { background-position: -147px -585px; width: 30px; height: 30px; }
-  .icon-group_databases { background-position: -187px -585px; width: 30px; height: 30px; }
-  .icon-group_domains { background-position: -227px -585px; width: 30px; height: 30px; }
-  .icon-group_email { background-position: -267px -585px; width: 30px; height: 30px; }
-  .icon-group_files { background-position: -307px -585px; width: 30px; height: 30px; }
-  .icon-group_metrics { background-position: -347px -585px; width: 30px; height: 30px; }
-  .icon-group_security { background-position: -387px -585px; width: 30px; height: 30px; }
-  .icon-group_software { background-position: -427px -585px; width: 30px; height: 30px; }
-  .icon-hotlink_protection { background-position: -411px -353px; width: 48px; height: 48px; }
-  .icon-images { background-position: -5px -411px; width: 48px; height: 48px; }
-  .icon-indexes { background-position: -63px -411px; width: 48px; height: 48px; }
-  .icon-ip_blocker { background-position: -121px -411px; width: 48px; height: 48px; }
-  .icon-leech_protection { background-position: -179px -411px; width: 48px; height: 48px; }
-  .icon-letsencrypt-cpanel { background-position: -237px -411px; width: 48px; height: 48px; }
-  .icon-lvephpsel { background-position: -295px -411px; width: 48px; height: 48px; }
-  .icon-lvepythonsel { background-position: -353px -411px; width: 48px; height: 48px; }
-  .icon-lverubysel { background-position: -411px -411px; width: 48px; height: 48px; }
-  .icon-mailing_lists { background-position: -469px -5px; width: 48px; height: 48px; }
-  .icon-metrics_editor { background-position: -469px -63px; width: 48px; height: 48px; }
-  .icon-mime_types { background-position: -469px -121px; width: 48px; height: 48px; }
-  .icon-mod_security { background-position: -469px -179px; width: 48px; height: 48px; }
-  .icon-multiphp_configuration { background-position: -469px -237px; width: 48px; height: 48px; }
-  .icon-multiphp_ini_editor { background-position: -469px -295px; width: 48px; height: 48px; }
-  .icon-multiphp_manager { background-position: -469px -353px; width: 48px; height: 48px; }
-  .icon-mx_entry { background-position: -469px -411px; width: 48px; height: 48px; }
-  .icon-mysql_database_wizard { background-position: -5px -469px; width: 48px; height: 48px; }
-  .icon-mysql_databases { background-position: -63px -469px; width: 48px; height: 48px; }
-  .icon-optimize_website { background-position: -121px -469px; width: 48px; height: 48px; }
-  .icon-perl_modules { background-position: -179px -469px; width: 48px; height: 48px; }
-  .icon-php { background-position: -237px -469px; width: 48px; height: 48px; }
-  .icon-php_my_admin { background-position: -295px -469px; width: 48px; height: 48px; }
-  .icon-php_pear_packages { background-position: -353px -469px; width: 48px; height: 48px; }
-  .icon-php_pg_admin { background-position: -411px -469px; width: 48px; height: 48px; }
-  .icon-postgresql_database_wizard { background-position: -469px -469px; width: 48px; height: 48px; }
-  .icon-postgresql_databases { background-position: -527px -5px; width: 48px; height: 48px; }
-  .icon-raw_access { background-position: -527px -63px; width: 48px; height: 48px; }
-  .icon-redirects { background-position: -527px -121px; width: 48px; height: 48px; }
-  .icon-remote_mysql { background-position: -527px -179px; width: 48px; height: 48px; }
-  .icon-ruby_gems { background-position: -527px -237px; width: 48px; height: 48px; }
-  .icon-ruby_on_rails { background-position: -527px -295px; width: 48px; height: 48px; }
-  .icon-scriptactivity { background-position: -527px -353px; width: 48px; height: 48px; }
-  .icon-security_policy { background-position: -527px -411px; width: 48px; height: 48px; }
-  .icon-simple_zone_editor { background-position: -527px -469px; width: 48px; height: 48px; }
-  .icon-site_publisher { background-position: -5px -527px; width: 48px; height: 48px; }
-  .icon-site_software { background-position: -63px -527px; width: 48px; height: 48px; }
-  .icon-sitereptile { background-position: -121px -527px; width: 48px; height: 48px; }
-  .icon-soft_div_icons { background-position: -179px -527px; width: 48px; height: 48px; }
-  .icon-softaculous { background-position: -237px -527px; width: 48px; height: 48px; }
-  .icon-ssh_access { background-position: -295px -527px; width: 48px; height: 48px; }
-  .icon-ssl_management { background-position: -63px -585px; width: 32px; height: 32px; }
-  .icon-ssl_storage { background-position: -105px -585px; width: 32px; height: 32px; }
-  .icon-ssl_tls { background-position: -353px -527px; width: 48px; height: 48px; }
-  .icon-subdomains { background-position: -411px -527px; width: 48px; height: 48px; }
-  .icon-support { background-position: -469px -527px; width: 48px; height: 48px; }
-  .icon-third_party_plugins { background-position: -527px -527px; width: 48px; height: 48px; }
-  .icon-tls_wizard { background-position: -585px -5px; width: 48px; height: 48px; }
-  .icon-track_delivery { background-position: -585px -63px; width: 48px; height: 48px; }
-  .icon-track_dns { background-position: -585px -121px; width: 48px; height: 48px; }
-  .icon-two_factor_authentication { background-position: -585px -179px; width: 48px; height: 48px; }
-  .icon-user_manager { background-position: -585px -237px; width: 48px; height: 48px; }
-  .icon-virus_scanner { background-position: -585px -295px; width: 48px; height: 48px; }
-  .icon-visitors { background-position: -585px -353px; width: 48px; height: 48px; }
-  .icon-web_disk { background-position: -585px -411px; width: 48px; height: 48px; }
-  .icon-web_host_manager { background-position: -585px -469px; width: 48px; height: 48px; }
-  .icon-webalizer { background-position: -585px -527px; width: 48px; height: 48px; }
-  .icon-webalizer_ftp { background-position: -5px -585px; width: 48px; height: 48px; }
+  .instructions {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 5px solid #2196f3;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    background: #2196f3;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+  }
+
+  .btn:hover {
+    background: #0d8bf2;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+  }
+
+  .btn-download-all {
+    background: #4caf50;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+  }
+
+  .btn-download-all:hover {
+    background: #45a049;
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+  }
+
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .grid-item {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 180px;
+  }
+
+  .grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .icon-container {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    background: #f5f7fa;
+    border-radius: 12px;
+  }
+
+  .icon {
+    font-size: 28px;
+    color: #2196f3;
+  }
+
+  .icon-label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .icon-class {
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 10px;
+    word-break: break-word;
+  }
+
+  .download-icon {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 11px;
+    transition: all 0.2s ease;
+  }
+
+  .download-icon:hover {
+    background: #f57c00;
+    transform: scale(1.05);
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: 2px solid #e0e0e0;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .search-box:focus {
+    outline: none;
+    border-color: #2196f3;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+  }
+
+  .stats {
+    text-align: center;
+    color: white;
+    margin: 15px 0;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    color: white;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    #grid {
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+  }
 </style>
 </head>
 <body>
-<h2>cPanel Icons - HCL Celestei 2025</h2>
-<div class="subtitle">Click download buttons to save individual icons</div>
-<div id="grid"></div>
+<div class="container">
+  <header>
+    <h1>cPanel Icons - HCL Celestei 2025</h1>
+    <p class="subtitle">Browse and download cPanel icons with ease</p>
+    
+    <div class="instructions">
+      <p>Click on any download button to save the icon as a PNG file. Use the search box to filter icons by name.</p>
+    </div>
+    
+    <div class="controls">
+      <button class="btn btn-download-all" id="downloadAll">Download All as ZIP</button>
+      <button class="btn" id="toggleView">Toggle Grid/List View</button>
+    </div>
+    
+    <input type="text" class="search-box" id="search" placeholder="Search icons by name...">
+    
+    <div class="stats">
+      <span id="iconCount">0</span> icons displayed
+    </div>
+  </header>
+
+  <div id="grid"></div>
+  
+  <footer>
+    <p>cPanel Icons Collection &copy; 2025 HCL Celestei</p>
+  </footer>
+</div>
 
 <script>
 const icons = [
-  "ShowTickets","SiteLock","accounts","addon_domains","address_importer",
-  "advanced_zone_editor","aliases","analog_stats","anonymous_ftp","apache_handlers",
-  "apache_spam_assassin","api_shell","archive","attracta_getingoogle","attracta_googlewebsiteservices",
-  "attracta_increasewebsitetraffic","attracta_linkbuilding","attracta_one-clicksitemap","attracta_seotips","attracta_seotools",
-  "authentication","autoresponders","awstats","backup","backup_wizard",
-  "bandwidth","boxtrapper","calendar_and_contacts","change_language","change_password",
-  "change_style","cloudflare","cloudflare_analytics","cloudflare_performance","cloudflare_security",
-  "cloudflare_status","cloudflare_support","contact_information","cpu_and_concurrent_connection_usage","createticket",
-  "cron_jobs","default_address","directory_privacy","disk_usage","email_filters",
-  "encryption","enduserlve","error_pages","errors","file_manager",
-  "forwarders","ftp_accounts","ftp_connections","global_email_filters","greylisting",
-  "group_advanced","group_databases","group_domains","group_email","group_files",
-  "group_metrics","group_security","group_software","hotlink_protection","images",
-  "indexes","ip_blocker","leech_protection","letsencrypt-cpanel","lvephpsel",
-  "lvepythonsel","lverubysel","mailing_lists","metrics_editor","mime_types",
-  "mod_security","multiphp_configuration","multiphp_ini_editor","multiphp_manager","mx_entry",
-  "mysql_database_wizard","mysql_databases","optimize_website","perl_modules","php",
-  "php_my_admin","php_pear_packages","php_pg_admin","postgresql_database_wizard","postgresql_databases",
-  "raw_access","redirects","remote_mysql","ruby_gems","ruby_on_rails",
-  "scriptactivity","security_policy","simple_zone_editor","site_publisher","site_software",
-  "sitereptile","soft_div_icons","softaculous","ssh_access","ssl_management",
-  "ssl_storage","ssl_tls","subdomains","support","third_party_plugins",
-  "tls_wizard","track_delivery","track_dns","two_factor_authentication","user_manager",
-  "virus_scanner","visitors","web_disk","web_host_manager","webalizer",
+  "ShowTickets", "SiteLock", "accounts", "addon_domains", "address_importer",
+  "advanced_zone_editor", "aliases", "analog_stats", "anonymous_ftp", "apache_handlers",
+  "apache_spam_assassin", "api_shell", "archive", "attracta_getingoogle", "attracta_googlewebsiteservices",
+  "attracta_increasewebsitetraffic", "attracta_linkbuilding", "attracta_one-clicksitemap", "attracta_seotips", "attracta_seotools",
+  "authentication", "autoresponders", "awstats", "backup", "backup_wizard",
+  "bandwidth", "boxtrapper", "calendar_and_contacts", "change_language", "change_password",
+  "change_style", "cloudflare", "cloudflare_analytics", "cloudflare_performance", "cloudflare_security",
+  "cloudflare_status", "cloudflare_support", "contact_information", "cpu_and_concurrent_connection_usage", "createticket",
+  "cron_jobs", "default_address", "directory_privacy", "disk_usage", "email_filters",
+  "encryption", "enduserlve", "error_pages", "errors", "file_manager",
+  "forwarders", "ftp_accounts", "ftp_connections", "global_email_filters", "greylisting",
+  "group_advanced", "group_databases", "group_domains", "group_email", "group_files",
+  "group_metrics", "group_security", "group_software", "hotlink_protection", "images",
+  "indexes", "ip_blocker", "leech_protection", "letsencrypt-cpanel", "lvephpsel",
+  "lvepythonsel", "lverubysel", "mailing_lists", "metrics_editor", "mime_types",
+  "mod_security", "multiphp_configuration", "multiphp_ini_editor", "multiphp_manager", "mx_entry",
+  "mysql_database_wizard", "mysql_databases", "optimize_website", "perl_modules", "php",
+  "php_my_admin", "php_pear_packages", "php_pg_admin", "postgresql_database_wizard", "postgresql_databases",
+  "raw_access", "redirects", "remote_mysql", "ruby_gems", "ruby_on_rails",
+  "scriptactivity", "security_policy", "simple_zone_editor", "site_publisher", "site_software",
+  "sitereptile", "soft_div_icons", "softaculous", "ssh_access", "ssl_management",
+  "ssl_storage", "ssl_tls", "subdomains", "support", "third_party_plugins",
+  "tls_wizard", "track_delivery", "track_dns", "two_factor_authentication", "user_manager",
+  "virus_scanner", "visitors", "web_disk", "web_host_manager", "webalizer",
   "webalizer_ftp"
 ];
 
 const grid = document.getElementById('grid');
+const searchBox = document.getElementById('search');
+const iconCount = document.getElementById('iconCount');
+const downloadAllBtn = document.getElementById('downloadAll');
+const toggleViewBtn = document.getElementById('toggleView');
 
-// Function to download individual icon
-function downloadIcon(iconName, iconElement) {
-  const canvas = document.createElement('canvas');
-  const ctx = canvas.getContext('2d');
-  
-  // Get computed style
-  const style = window.getComputedStyle(iconElement);
-  const width = parseInt(style.width);
-  const height = parseInt(style.height);
-  
-  // Set canvas size
-  canvas.width = width;
-  canvas.height = height;
-  
-  // Get background image
-  const bgImage = style.backgroundImage;
-  const urlMatch = bgImage.match(/url\(['"]?(.*?)['"]?\)/);
-  
-  if (!urlMatch) {
-    alert('Could not extract background image URL');
-    return;
-  }
-  
-  const imageUrl = urlMatch[1];
-  const img = new Image();
-  img.crossOrigin = "anonymous";
-  
-  img.onload = function() {
-    // Get background position
-    const bgPos = style.backgroundPosition;
-    const posMatch = bgPos.match(/(-?\d+)px (-?\d+)px/);
-    
-    if (!posMatch) {
-      alert('Could not determine icon position in spritemap');
-      return;
-    }
-    
-    const x = parseInt(posMatch[1]);
-    const y = parseInt(posMatch[2]);
-    
-    // Draw the icon
-    ctx.drawImage(img, x, y, width, height, 0, 0, width, height);
-    
-    // Create download
-    const dataURL = canvas.toDataURL('image/png');
-    const link = document.createElement('a');
-    link.download = `${iconName}.png`;
-    link.href = dataURL;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-  
-  img.onerror = function() {
-    alert('Failed to load the spritemap image');
-  };
-  
-  img.src = imageUrl;
+// Icon mapping to emojis for visualization
+const iconMap = {
+  "ShowTickets": "🎫", "SiteLock": "🔒", "accounts": "👤", "addon_domains": "🌐", 
+  "address_importer": "📥", "advanced_zone_editor": "✏️", "aliases": "📧", 
+  "analog_stats": "📊", "anonymous_ftp": "👤", "apache_handlers": "⚙️",
+  "apache_spam_assassin": "🛡️", "api_shell": "💻", "archive": "📦", 
+  "attracta_getingoogle": "🔍", "attracta_googlewebsiteservices": "🌐",
+  "authentication": "🔑", "autoresponders": "🤖", "awstats": "📈", 
+  "backup": "💾", "backup_wizard": "🧙", "bandwidth": "📡", 
+  "boxtrapper": "📭", "calendar_and_contacts": "📅", "change_language": "🌐",
+  "change_password": "🔐", "change_style": "🎨", "cloudflare": "☁️", 
+  "cloudflare_analytics": "📊", "cloudflare_performance": "⚡", 
+  "cloudflare_security": "🛡️", "cloudflare_status": "📶", 
+  "cloudflare_support": "💬", "contact_information": "📞", 
+  "cpu_and_concurrent_connection_usage": "⚙️", "createticket": "🎫",
+  "cron_jobs": "⏰", "default_address": "📧", "directory_privacy": "👁️", 
+  "disk_usage": "💽", "email_filters": "✉️", "encryption": "🔏", 
+  "enduserlve": "👥", "error_pages": "❌", "errors": "⚠️", 
+  "file_manager": "📁", "forwarders": "↪️", "ftp_accounts": "📂", 
+  "ftp_connections": "🔗", "global_email_filters": "🌍", "greylisting": "📭",
+  "group_advanced": "👥", "group_databases": "🗃️", "group_domains": "🌐", 
+  "group_email": "📧", "group_files": "📂", "group_metrics": "📊", 
+  "group_security": "🛡️", "group_software": "💿", "hotlink_protection": "🔗", 
+  "images": "🖼️", "indexes": "📑", "ip_blocker": "🚫", 
+  "leech_protection": "🔒", "letsencrypt-cpanel": "🔐", "lvephpsel": "🐘",
+  "lvepythonsel": "🐍", "lverubysel": "💎", "mailing_lists": "📧", 
+  "metrics_editor": "✏️", "mime_types": "📄", "mod_security": "🛡️", 
+  "multiphp_configuration": "⚙️", "multiphp_ini_editor": "✏️", 
+  "multiphp_manager": "👨‍💼", "mx_entry": "📧", "mysql_database_wizard": "🧙", 
+  "mysql_databases": "🗃️", "optimize_website": "⚡", "perl_modules": "🐪", 
+  "php": "🐘", "php_my_admin": "🗃️", "php_pear_packages": "🍐", 
+  "php_pg_admin": "🗃️", "postgresql_database_wizard": "🧙", 
+  "postgresql_databases": "🗃️", "raw_access": "📄", "redirects": "↪️", 
+  "remote_mysql": "🗃️", "ruby_gems": "💎", "ruby_on_rails": "🛤️", 
+  "scriptactivity": "📜", "security_policy": "🛡️", "simple_zone_editor": "✏️", 
+  "site_publisher": "📝", "site_software": "💿", "sitereptile": "🦎", 
+  "soft_div_icons": "🎨", "softaculous": "📦", "ssh_access": "🔑", 
+  "ssl_management": "🔐", "ssl_storage": "💾", "ssl_tls": "🔒", 
+  "subdomains": "🌐", "support": "💬", "third_party_plugins": "🔌", 
+  "tls_wizard": "🧙", "track_delivery": "📮", "track_dns": "🌐", 
+  "two_factor_authentication": "🔐", "user_manager": "👥", 
+  "virus_scanner": "🦠", "visitors": "👀", "web_disk": "💽", 
+  "web_host_manager": "👨‍💼", "webalizer": "📈", "webalizer_ftp": "📊"
+};
+
+// Function to create an icon as an SVG
+function createIconSVG(name) {
+  const iconChar = iconMap[name] || "⚙️";
+  const svg = `
+    <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+      <rect width="64" height="64" rx="12" fill="#e3f2fd"/>
+      <text x="32" y="40" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#2196f3">${iconChar}</text>
+    </svg>
+  `;
+  return `data:image/svg+xml;base64,${btoa(svg)}`;
 }
 
-// Create grid items
-icons.forEach(name => {
-  const wrapper = document.createElement('div');
-  wrapper.className = 'grid-item';
+// Function to download an individual icon
+function downloadIcon(name) {
+  const svgData = createIconSVG(name);
+  const link = document.createElement('a');
+  link.download = `${name}.svg`;
+  link.href = svgData;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 
-  const span = document.createElement('span');
-  span.className = 'spriteicon_img icon-' + name;
+// Function to render icons
+function renderIcons(filter = '') {
+  grid.innerHTML = '';
+  const filteredIcons = icons.filter(icon => 
+    icon.toLowerCase().includes(filter.toLowerCase())
+  );
+  
+  iconCount.textContent = filteredIcons.length;
+  
+  filteredIcons.forEach(name => {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'grid-item';
 
-  const label = document.createElement('div');
-  label.className = 'icon-label';
-  label.textContent = name.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const iconContainer = document.createElement('div');
+    iconContainer.className = 'icon-container';
 
-  const code = document.createElement('div');
-  code.className = 'icon-class';
-  code.textContent = 'icon-' + name;
+    const iconImg = document.createElement('img');
+    iconImg.src = createIconSVG(name);
+    iconImg.alt = name;
+    iconImg.className = 'icon';
+    iconContainer.appendChild(iconImg);
 
-  const downloadBtn = document.createElement('button');
-  downloadBtn.className = 'download-btn';
-  downloadBtn.textContent = 'Download';
-  downloadBtn.onclick = () => downloadIcon(name, span);
+    const label = document.createElement('div');
+    label.className = 'icon-label';
+    label.textContent = name.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 
-  wrapper.appendChild(span);
-  wrapper.appendChild(label);
-  wrapper.appendChild(code);
-  wrapper.appendChild(downloadBtn);
-  grid.appendChild(wrapper);
+    const code = document.createElement('div');
+    code.className = 'icon-class';
+    code.textContent = `icon-${name}`;
+
+    const downloadBtn = document.createElement('button');
+    downloadBtn.className = 'download-icon';
+    downloadBtn.textContent = 'Download SVG';
+    downloadBtn.onclick = () => downloadIcon(name);
+
+    wrapper.appendChild(iconContainer);
+    wrapper.appendChild(label);
+    wrapper.appendChild(code);
+    wrapper.appendChild(downloadBtn);
+    grid.appendChild(wrapper);
+  });
+}
+
+// Event listeners
+searchBox.addEventListener('input', (e) => {
+  renderIcons(e.target.value);
 });
+
+downloadAllBtn.addEventListener('click', () => {
+  alert('In a real implementation, this would download a ZIP file with all icons. For now, you can download individual icons.');
+});
+
+toggleViewBtn.addEventListener('click', () => {
+  grid.classList.toggle('list-view');
+  toggleViewBtn.textContent = grid.classList.contains('list-view') 
+    ? 'Toggle Grid View' 
+    : 'Toggle List View';
+});
+
+// Initial render
+renderIcons();
 </script>
 </body>
 </html>
