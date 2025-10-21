@@ -128,8 +128,8 @@
   }
 
   .icon {
-    font-size: 28px;
-    color: #2196f3;
+    width: 48px;
+    height: 48px;
   }
 
   .icon-label {
@@ -215,7 +215,7 @@
     <p class="subtitle">Browse and download cPanel icons with ease</p>
     
     <div class="instructions">
-      <p>Click on any download button to save the icon as a PNG file. Use the search box to filter icons by name.</p>
+      <p>Click on any download button to save the icon as an SVG file. Use the search box to filter icons by name.</p>
     </div>
     
     <div class="controls">
@@ -272,72 +272,74 @@ const iconCount = document.getElementById('iconCount');
 const downloadAllBtn = document.getElementById('downloadAll');
 const toggleViewBtn = document.getElementById('toggleView');
 
-// Icon mapping to emojis for visualization
-const iconMap = {
-  "ShowTickets": "🎫", "SiteLock": "🔒", "accounts": "👤", "addon_domains": "🌐", 
-  "address_importer": "📥", "advanced_zone_editor": "✏️", "aliases": "📧", 
-  "analog_stats": "📊", "anonymous_ftp": "👤", "apache_handlers": "⚙️",
-  "apache_spam_assassin": "🛡️", "api_shell": "💻", "archive": "📦", 
-  "attracta_getingoogle": "🔍", "attracta_googlewebsiteservices": "🌐",
-  "authentication": "🔑", "autoresponders": "🤖", "awstats": "📈", 
-  "backup": "💾", "backup_wizard": "🧙", "bandwidth": "📡", 
-  "boxtrapper": "📭", "calendar_and_contacts": "📅", "change_language": "🌐",
-  "change_password": "🔐", "change_style": "🎨", "cloudflare": "☁️", 
-  "cloudflare_analytics": "📊", "cloudflare_performance": "⚡", 
-  "cloudflare_security": "🛡️", "cloudflare_status": "📶", 
-  "cloudflare_support": "💬", "contact_information": "📞", 
-  "cpu_and_concurrent_connection_usage": "⚙️", "createticket": "🎫",
-  "cron_jobs": "⏰", "default_address": "📧", "directory_privacy": "👁️", 
-  "disk_usage": "💽", "email_filters": "✉️", "encryption": "🔏", 
-  "enduserlve": "👥", "error_pages": "❌", "errors": "⚠️", 
-  "file_manager": "📁", "forwarders": "↪️", "ftp_accounts": "📂", 
-  "ftp_connections": "🔗", "global_email_filters": "🌍", "greylisting": "📭",
-  "group_advanced": "👥", "group_databases": "🗃️", "group_domains": "🌐", 
-  "group_email": "📧", "group_files": "📂", "group_metrics": "📊", 
-  "group_security": "🛡️", "group_software": "💿", "hotlink_protection": "🔗", 
-  "images": "🖼️", "indexes": "📑", "ip_blocker": "🚫", 
-  "leech_protection": "🔒", "letsencrypt-cpanel": "🔐", "lvephpsel": "🐘",
-  "lvepythonsel": "🐍", "lverubysel": "💎", "mailing_lists": "📧", 
-  "metrics_editor": "✏️", "mime_types": "📄", "mod_security": "🛡️", 
-  "multiphp_configuration": "⚙️", "multiphp_ini_editor": "✏️", 
-  "multiphp_manager": "👨‍💼", "mx_entry": "📧", "mysql_database_wizard": "🧙", 
-  "mysql_databases": "🗃️", "optimize_website": "⚡", "perl_modules": "🐪", 
-  "php": "🐘", "php_my_admin": "🗃️", "php_pear_packages": "🍐", 
-  "php_pg_admin": "🗃️", "postgresql_database_wizard": "🧙", 
-  "postgresql_databases": "🗃️", "raw_access": "📄", "redirects": "↪️", 
-  "remote_mysql": "🗃️", "ruby_gems": "💎", "ruby_on_rails": "🛤️", 
-  "scriptactivity": "📜", "security_policy": "🛡️", "simple_zone_editor": "✏️", 
-  "site_publisher": "📝", "site_software": "💿", "sitereptile": "🦎", 
-  "soft_div_icons": "🎨", "softaculous": "📦", "ssh_access": "🔑", 
-  "ssl_management": "🔐", "ssl_storage": "💾", "ssl_tls": "🔒", 
-  "subdomains": "🌐", "support": "💬", "third_party_plugins": "🔌", 
-  "tls_wizard": "🧙", "track_delivery": "📮", "track_dns": "🌐", 
-  "two_factor_authentication": "🔐", "user_manager": "👥", 
-  "virus_scanner": "🦠", "visitors": "👀", "web_disk": "💽", 
-  "web_host_manager": "👨‍💼", "webalizer": "📈", "webalizer_ftp": "📊"
-};
-
-// Function to create an icon as an SVG
-function createIconSVG(name) {
-  const iconChar = iconMap[name] || "⚙️";
-  const svg = `
-    <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-      <rect width="64" height="64" rx="12" fill="#e3f2fd"/>
-      <text x="32" y="40" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#2196f3">${iconChar}</text>
+// Function to create an icon as an SVG with simple geometric shapes
+function createIconSVG(name, index) {
+  // Use index to create different geometric patterns
+  const shapes = [
+    // Circle-based icons
+    '<circle cx="32" cy="32" r="20" fill="#2196f3" stroke="#0d47a1" stroke-width="2"/>',
+    // Square-based icons
+    '<rect x="12" y="12" width="40" height="40" rx="8" fill="#4caf50" stroke="#1b5e20" stroke-width="2"/>',
+    // Triangle-based icons
+    '<polygon points="32,12 52,52 12,52" fill="#ff9800" stroke="#e65100" stroke-width="2"/>',
+    // Diamond-based icons
+    '<polygon points="32,12 52,32 32,52 12,32" fill="#9c27b0" stroke="#4a148c" stroke-width="2"/>',
+    // Hexagon-based icons
+    '<polygon points="32,12 48,22 48,42 32,52 16,42 16,22" fill="#f44336" stroke="#b71c1c" stroke-width="2"/>'
+  ];
+  
+  const shape = shapes[index % shapes.length];
+  
+  // Add some decorative elements based on index
+  const decorations = [
+    '<circle cx="32" cy="32" r="8" fill="white" opacity="0.7"/>',
+    '<rect x="24" y="24" width="16" height="16" fill="white" opacity="0.7" rx="3"/>',
+    '<line x1="20" y1="20" x2="44" y2="44" stroke="white" stroke-width="3" opacity="0.7"/>',
+    '<line x1="20" y1="44" x2="44" y2="20" stroke="white" stroke-width="3" opacity="0.7"/>',
+    '<circle cx="32" cy="32" r="12" fill="none" stroke="white" stroke-width="2" opacity="0.7"/>'
+  ];
+  
+  const decoration = decorations[index % decorations.length];
+  
+  const svgContent = `
+    <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+      ${shape}
+      ${decoration}
+      <text x="32" y="38" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white" font-weight="bold">${(index % 99) + 1}</text>
     </svg>
   `;
-  return `data:image/svg+xml;base64,${btoa(svg)}`;
+  
+  // Properly encode the SVG for data URL
+  const encodedSVG = encodeURIComponent(svgContent)
+    .replace(/'/g, '%27')
+    .replace(/"/g, '%22');
+  
+  return `data:image/svg+xml;charset=utf-8,${encodedSVG}`;
 }
 
 // Function to download an individual icon
-function downloadIcon(name) {
-  const svgData = createIconSVG(name);
+function downloadIcon(name, index) {
+  const svgContent = `
+    <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="12" fill="#2196f3"/>
+      <circle cx="32" cy="32" r="16" fill="white" opacity="0.8"/>
+      <text x="32" y="38" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2196f3" font-weight="bold">${(index % 99) + 1}</text>
+      <text x="32" y="55" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="white">${name.substring(0, 8)}</text>
+    </svg>
+  `;
+  
+  const blob = new Blob([svgContent], { type: 'image/svg+xml' });
+  const url = URL.createObjectURL(blob);
+  
   const link = document.createElement('a');
   link.download = `${name}.svg`;
-  link.href = svgData;
+  link.href = url;
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
+  
+  // Clean up the URL object
+  setTimeout(() => URL.revokeObjectURL(url), 100);
 }
 
 // Function to render icons
@@ -349,7 +351,7 @@ function renderIcons(filter = '') {
   
   iconCount.textContent = filteredIcons.length;
   
-  filteredIcons.forEach(name => {
+  filteredIcons.forEach((name, index) => {
     const wrapper = document.createElement('div');
     wrapper.className = 'grid-item';
 
@@ -357,7 +359,7 @@ function renderIcons(filter = '') {
     iconContainer.className = 'icon-container';
 
     const iconImg = document.createElement('img');
-    iconImg.src = createIconSVG(name);
+    iconImg.src = createIconSVG(name, index);
     iconImg.alt = name;
     iconImg.className = 'icon';
     iconContainer.appendChild(iconImg);
@@ -373,7 +375,7 @@ function renderIcons(filter = '') {
     const downloadBtn = document.createElement('button');
     downloadBtn.className = 'download-icon';
     downloadBtn.textContent = 'Download SVG';
-    downloadBtn.onclick = () => downloadIcon(name);
+    downloadBtn.onclick = () => downloadIcon(name, index);
 
     wrapper.appendChild(iconContainer);
     wrapper.appendChild(label);
