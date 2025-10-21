@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cPanel Icons - Downloadable</title>
+<link rel="icon" href="elements/favicon.ico" type="image/x-icon">
+<style>
+  /* Spritemap base for all icons */
+  .spriteicon_img {
+    background-image: url('elements/icon_spritemap.png');
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    display: block;
+  }
+
+  /* Grid layout */
+  #grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: all 0.2s ease;
+  }
+
+  .grid-item:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .icon-label {
+    margin-top: 5px;
+    word-break: break-word;
+    font-weight: bold;
+  }
+
+  .icon-class {
+    margin-top: 2px;
+    font-size: 10px;
+    color: gray;
+    word-break: break-all;
+  }
+
+  .download-btn {
+    margin-top: 8px;
+    padding: 4px 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 10px;
+    transition: background-color 0.2s;
+  }
+
+  .download-btn:hover {
+    background-color: #45a049;
+  }
+
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  /* Individual icon positioning - these would normally be in your CSS file */
+  .icon-ShowTickets { background-position: 0 0; }
+  .icon-SiteLock { background-position: -48px 0; }
+  .icon-accounts { background-position: -96px 0; }
+  /* Add more positioning rules as needed */
+</style>
+</head>
+<body>
+<h2>cPanel Icons - HCL Celestei 2025</h2>
+<div class="subtitle">Click download buttons to save individual icons</div>
+<div id="grid"></div>
+
+<script>
+const icons = [
+  "ShowTickets","SiteLock","accounts","addon_domains","address_importer",
+  "advanced_zone_editor","aliases","analog_stats","anonymous_ftp","apache_handlers",
+  "apache_spam_assassin","api_shell","archive","attracta_getingoogle","attracta_googlewebsiteservices",
+  "attracta_increasewebsitetraffic","attracta_linkbuilding","attracta_one-clicksitemap","attracta_seotips","attracta_seotools",
+  "authentication","autoresponders","awstats","backup","backup_wizard",
+  "bandwidth","boxtrapper","calendar_and_contacts","change_language","change_password",
+  "change_style","cloudflare","cloudflare_analytics","cloudflare_performance","cloudflare_security",
+  "cloudflare_status","cloudflare_support","contact_information","cpu_and_concurrent_connection_usage","createticket",
+  "cron_jobs","default_address","directory_privacy","disk_usage","email_filters",
+  "encryption","enduserlve","error_pages","errors","file_manager",
+  "forwarders","ftp_accounts","ftp_connections","global_email_filters","greylisting",
+  "group_advanced","group_databases","group_domains","group_email","group_files",
+  "group_metrics","group_security","group_software","hotlink_protection","images",
+  "indexes","ip_blocker","leech_protection","letsencrypt-cpanel","lvephpsel",
+  "lvepythonsel","lverubysel","mailing_lists","metrics_editor","mime_types",
+  "mod_security","multiphp_configuration","multiphp_ini_editor","multiphp_manager","mx_entry",
+  "mysql_database_wizard","mysql_databases","optimize_website","perl_modules","php",
+  "php_my_admin","php_pear_packages","php_pg_admin","postgresql_database_wizard","postgresql_databases",
+  "raw_access","redirects","remote_mysql","ruby_gems","ruby_on_rails",
+  "scriptactivity","security_policy","simple_zone_editor","site_publisher","site_software",
+  "sitereptile","soft_div_icons","softaculous","ssh_access","ssl_management",
+  "ssl_storage","ssl_tls","subdomains","support","third_party_plugins",
+  "tls_wizard","track_delivery","track_dns","two_factor_authentication","user_manager",
+  "virus_scanner","visitors","web_disk","web_host_manager","webalizer",
+  "webalizer_ftp"
+];
+
+const grid = document.getElementById('grid');
+
+// Function to download an icon as PNG
+function downloadIcon(iconName, iconElement) {
+  // Create a canvas element
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  
+  // Set canvas dimensions
+  canvas.width = 48;
+  canvas.height = 48;
+  
+  // Get the computed style of the icon element
+  const style = window.getComputedStyle(iconElement);
+  
+  // Get background image URL
+  const bgImage = style.backgroundImage;
+  const urlMatch = bgImage.match(/url\(['"]?(.*?)['"]?\)/);
+  
+  if (!urlMatch) {
+    alert('Could not extract background image URL');
+    return;
+  }
+  
+  const imageUrl = urlMatch[1];
+  
+  // Create an image element to load the spritemap
+  const img = new Image();
+  img.crossOrigin = "anonymous"; // Handle CORS if needed
+  
+  img.onload = function() {
+    // Get background position
+    const bgPos = style.backgroundPosition;
+    const posMatch = bgPos.match(/(-?\d+)px (-?\d+)px/);
+    
+    if (!posMatch) {
+      alert('Could not determine icon position in spritemap');
+      return;
+    }
+    
+    const x = parseInt(posMatch[1]);
+    const y = parseInt(posMatch[2]);
+    
+    // Draw the specific icon portion from the spritemap
+    ctx.drawImage(img, x, y, 48, 48, 0, 0, 48, 48);
+    
+    // Convert canvas to data URL and trigger download
+    const dataURL = canvas.toDataURL('image/png');
+    const link = document.createElement('a');
+    link.download = `${iconName}.png`;
+    link.href = dataURL;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+  
+  img.onerror = function() {
+    alert('Failed to load the spritemap image');
+  };
+  
+  img.src = imageUrl;
+}
+
+// Create grid items
+icons.forEach(name => {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'grid-item';
+
+  const span = document.createElement('span');
+  span.className = 'spriteicon_img icon-' + name;
+
+  const label = document.createElement('div');
+  label.className = 'icon-label';
+  label.textContent = name.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+  const code = document.createElement('div');
+  code.className = 'icon-class';
+  code.textContent = 'icon-' + name;
+
+  const downloadBtn = document.createElement('button');
+  downloadBtn.className = 'download-btn';
+  downloadBtn.textContent = 'Download';
+  downloadBtn.onclick = () => downloadIcon(name, span);
+
+  wrapper.appendChild(span);
+  wrapper.appendChild(label);
+  wrapper.appendChild(code);
+  wrapper.appendChild(downloadBtn);
+  grid.appendChild(wrapper);
+});
+</script>
+</body>
+</html>
